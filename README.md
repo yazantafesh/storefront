@@ -14,10 +14,10 @@ The following user/developer stories detail the major functionality for this pha
 
 ## Links
 
-  Sandbox Deployment Link: 
+  Sandbox Deployment Link: https://codesandbox.io/s/laughing-frost-qiutu
 
-  Pull Request: 
+  Pull Request: https://github.com/yazantafesh/storefront/pull/1
 
 ## UML
 
-![UML](./lab31.JPG)
+![UML](./redux.png)
