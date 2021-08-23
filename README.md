@@ -14,9 +14,9 @@ The following user/developer stories detail the major functionality for this pha
 
 ## Links
 
-  Sandbox Deployment Link: https://codesandbox.io/s/laughing-frost-qiutu
+  Sandbox Deployment Link: https://ev0s8.csb.app/
 
-  Pull Request: https://github.com/yazantafesh/storefront/pull/1
+  Pull Request: https://github.com/yazantafesh/storefront/pull/4
 
 ## UML
 
