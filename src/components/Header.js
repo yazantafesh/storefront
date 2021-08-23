@@ -6,8 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { createTheme } from '@material-ui/core/styles';
 import blueGrey from '@material-ui/core/colors/blueGrey';
+import {connect} from 'react-redux';
 
 const primary = blueGrey[700];
 
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Header() {
+function Header(props) {
   const classes = useStyles();
 
   return (
@@ -37,11 +37,15 @@ export default function Header() {
           <Typography variant="h6" className={classes.title}>
             Yazan's Store
           </Typography>
-          {/* <Button color="inherit">Login</Button> */}
+          <Button color="inherit" onClick={()=>{props.show()}}>CART({props.cart.length})</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
 
+function mapStateToProps(state){
+  return { cart: state.cart };
+}
 
+export default connect(mapStateToProps)(Header);
