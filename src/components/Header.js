@@ -3,13 +3,22 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import blueGrey from '@material-ui/core/colors/blueGrey';
 import {connect} from 'react-redux';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Badge from '@material-ui/core/Badge';
+import { withStyles } from '@material-ui/core/styles';
+import StorefrontIcon from '@material-ui/icons/Storefront';
 
-const primary = blueGrey[700];
+const StyledBadge = withStyles((theme) => ({
+  badge: {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 4px',
+  },
+}))(Badge);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,15 +38,19 @@ function Header(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color={primary}>
+      <AppBar position="static" color='primary'>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
+            <StorefrontIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             Yazan's Store
           </Typography>
-          <Button color="inherit" onClick={()=>{props.show()}}>CART({props.cart.length})</Button>
+          <IconButton color="inherit"  onClick={()=>{props.show()}}>
+          <StyledBadge badgeContent={props.cart.length} color="secondary">
+          <ShoppingCartIcon />
+          </StyledBadge>
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
