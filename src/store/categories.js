@@ -1,6 +1,6 @@
 const initialState = {
   
-  categories: [{ name: 'Electronics', description: 'Here you can find a variety of our electronic devices' }, { name: 'Food', description: 'Here you can find all kinds of foods you desire' }],
+  categories: [{ name: 'electronics', description: 'Here you can find a variety of our electronic devices', displayName: 'ELECTRONICS' }, { name: 'mobile', description: 'Here you can find all kinds of mobile phones', displayName: 'MOBILE PHONES' }],
   activeCategory: {},
 }
 

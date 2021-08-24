@@ -33,11 +33,11 @@ function Products(props) {
   return (
     <>
       {props.products.activeProducts.map((element, idx) => {
-        return <Card className={classes.root} key={idx} style={{ display: 'inline-block', marginLeft: '25%', height: '5%', width: '20%', marginTop: '3%', marginBottom: '2%'}}>
+        return <Card className={classes.root} key={idx} style={{ display: 'inline-block', marginLeft: '15%', height: '5%', width: '20%', marginTop: '3%', marginBottom: '2%', border: 'solid 1pt #334756', boxShadow: '4px 4px 2px 1px rgba(0, 0, 255, .2)', borderRadius:'5%',textAlign:'center'}}>
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image={element.image}
+              image={`https://source.unsplash.com/random?${element.name}`}
               title={element.name}
             />
             <CardContent>
@@ -45,12 +45,12 @@ function Products(props) {
                 {element.name} - ${element.price}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                {element.description}
+              Quantity: {element.inStock}
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary" onClick={()=>{handleClick(element)}}>
+            <Button size="small" color="secondary" onClick={()=>{handleClick(element)}} style={{marginLeft:'20%'}}>
               Add To Cart
             </Button>
             {/* <Button size="small" color="primary">
