@@ -14,9 +14,9 @@ The following user/developer stories detail the major functionality for this pha
 
 ## Links
 
-  Sandbox Deployment Link: https://ev0s8.csb.app/
+  Sandbox Deployment Link: https://40zo1.csb.app/
 
-  Pull Request: https://github.com/yazantafesh/storefront/pull/4
+  Pull Request: https://github.com/yazantafesh/storefront/pull/6
 
 ## UML
 
